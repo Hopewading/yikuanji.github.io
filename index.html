@@ -3,10 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yikuan Ji - Personal Website</title>
+    <meta name="description" content="Yikuan Ji - Personal Academic Website">
+    <title>Yikuan Ji - Home</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+        header {
+            background-color: #fafafa;
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: normal;
+            color: #222;
+        }
+        header p {
+            margin: 1rem 0 0;
+            font-size: 1.2rem;
+            color: #555;
+        }
+        nav {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            line-height: 1.8;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #fafafa;
+            color: #777;
+            border-top: 1px solid #e0e0e0;
+        }
+        .button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: #0066cc;
+            color: white;
+            border-radius: 3px;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        .button:hover {
+            background-color: #004999;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Yikuan Ji's Personal Website</h1>
-    
+    <header>
+        <h1>Yikuan Ji</h1>
+        <p>Research | Publications | Teaching | Contact</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Welcome to my personal academic website. I am Yikuan Ji, a researcher with interests in [Your Research Areas Here].
+                My work focuses on [Brief Description of Research Focus]. Here you will find details about my research projects, publications, and academic background.
+            </p>
+            <a class="button" href="/assets/CV.pdf" target="_blank">Download My CV</a>
+        </section>
+
+        <section id="research">
+            <h2>Research</h2>
+            <p>
+                [Provide an overview of your research areas and key projects. Include brief descriptions and links to detailed pages if necessary.]
+            </p>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <p>
+                [List your publications with proper citations. Include links to full-text versions if available.]
+            </p>
+        </section>
+
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <p>
+                [Provide information about your teaching experience, courses taught, and teaching philosophy.]
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Feel free to reach out via <a href="mailto:your.email@example.com">email</a> or connect with me on <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Yikuan Ji. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
