@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Homepage of Yikuan Ji, Ph.D. candidate at the University of Maryland, showcasing research and teaching experience.">
-    <meta name="keywords" content="Yikuan Ji, Transportation Economics, Urban Economics, Environmental Economics, Energy Economics, University of Maryland, Cornell University, Teaching, Research">
+    <meta name="description" content="Research projects by Yikuan Ji, Ph.D. candidate at the University of Maryland, focusing on Transportation Economics, Urban Economics, Environmental Economics, and Energy Economics.">
+    <meta name="keywords" content="Yikuan Ji Research, Transportation Economics, Urban Economics, Congestion Pricing, Public Transit, Environmental Economics, Energy Economics">
     <meta name="author" content="Yikuan Ji">
-    <title>Yikuan Ji</title>
+    <title>Yikuan Ji - Research</title>
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -18,31 +18,34 @@
         }
         header {
             background-color: #fafafa;
-            padding: 1rem;
+            padding: 1rem 0;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
             border-bottom: 1px solid #e0e0e0;
+            position: relative;
         }
         header h1 {
-            margin: 0.5rem 0;
+            margin: 0;
             font-size: 2rem;
             font-weight: normal;
             color: #222;
         }
         .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
+            position: absolute;
+            right: 2rem;
         }
         .nav-links a {
+            margin-left: 1.5rem;
             font-size: 1.1rem;
             color: #0066cc;
             text-decoration: none;
             font-weight: bold;
         }
-        .nav-links a:hover, .nav-links .active {
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .nav-links .active {
             text-decoration: underline;
         }
         .container {
@@ -50,77 +53,43 @@
             margin: 3rem auto;
             padding: 0 1rem;
         }
-        .bio-section, .photo-section, .research-section, .contact-section {
-            margin-bottom: 3rem;
-        }
-        .bio-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .bio-text {
-            flex: 1 1 55%;
-            text-align: left;
-            line-height: 2;
-        }
-        .photo-section {
-            flex: 1 1 35%;
-            text-align: center;
-        }
-        img.profile-photo {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            object-fit: cover;
-        }
-        .button-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-        .button-links a {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            font-size: 1.1rem;
-            background-color: #0066cc;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .button-links a:hover {
-            background-color: #004999;
-        }
-        .research-section ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-        .research-section ul li {
-            font-size: 1.1rem;
-            background-color: #f1f1f1;
-            padding: 1rem 2rem;
-            border-radius: 20px;
-        }
-        .contact-section {
+        .project-card {
             background-color: #f9f9f9;
+            border-radius: 10px;
             padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
-        .contact-section h2 {
-            margin-bottom: 1rem;
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
         }
-        .contact-item {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+        .project-type {
+            font-size: 1rem;
+            color: #888;
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+        .coauthor {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        .project-description {
+            margin-top: 1rem;
+            line-height: 1.8;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project-link:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
@@ -130,74 +99,63 @@
             border-top: 1px solid #e0e0e0;
         }
         @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
             header h1 {
-                font-size: 1.8rem;
-            }
-            .nav-links {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-            .bio-section {
-                flex-direction: column;
-            }
-            img.profile-photo {
-                max-width: 300px;
-            }
-            .button-links {
-                flex-direction: column;
-                gap: 1rem;
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Yikuan Ji</h1>
+        <h1>Research</h1>
         <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="research.html">Research</a>
-            <a href="teaching.html">Teaching</a>
+            <a href="index.html">Home</a>
+            <a href="research.html" class="active">Research</a>
+             <a href="teaching.html">Teaching</a>
         </nav>
     </header>
 
-    <main>
-        <div class="container bio-section">
-            <div class="bio-text">
-                <h2>About Me</h2>
-                <p>
-                    Welcome to my website! I am Yikuan Ji, a Ph.D. candidate in Agricultural and Resource Economics at <strong>University of Maryland, College Park</strong>. My research interests lie at the intersection of transportation economics, energy economics, and environmental economics. My current research primarily focuses on the distributional effects of the congestion charge policy in New York City. I plan to be on the <strong>2025-25 Job Market.</strong>
-                </p>
-                <p>
-                    Prior to my doctoral studies, I earned my Master of Science in Applied Economics and Management from <strong>Cornell University</strong> and a Bachelor's degree in Public Economics from <strong>Fudan University</strong>, graduating with distinction. My academic journey has taken me from Shanghai to Honolulu, Ithaca, and now Maryland, enriching my perspective on urban transportation economics, with future plans to expand my research into broader economic issues.
-                </p>
+    <main class="container">
+        <div class="project-card">
+            <div class="project-title">Distributional Impacts of Congestion Charge Policy in New York City</div>
+            <div class="project-type">Job Market Paper</div>
+            <div class="project-description">
+                Abstract: This research examines the distributional impacts of New York City’s congestion pricing policy, the first proposed of its kind in the United States. Although initially planned for January 2025, the policy was paused by the federal government, providing a unique opportunity to evaluate its potential impacts and inform future implementation. The policy aims to reduce traffic congestion in Manhattan’s Central Business District and generate revenue for public transit improvements, but equity concerns remain central as costs and benefits may not be evenly distributed. This study investigates welfare changes experienced by residents across different socioeconomic and geographic groups, using a discrete choice model calibrated with real-time traffic and trip diary data to evaluate behavioral responses. It also explores the effects of various pricing structures and revenue allocation strategies. The findings offer actionable insights for policymakers on designing congestion pricing systems that reduce traffic congestion while ensuring fairness, making the best use of revenue, and gaining broad public support.
             </div>
-            <div class="photo-section">
-                <img src="/assets/profile.jpg" alt="Yikuan Ji's Photo" class="profile-photo">
-                <div class="button-links">
-                    <a href="#contact">Email</a>
-                    <a href="https://www.linkedin.com/in/yikuan-ji-169546151/" target="_blank">LinkedIn</a>
-                    <a href="https://scholar.google.com/citations?user=6VTJ56YAAAAJ" target="_blank">Google Scholar</a>
-                    <a href="https://www.dropbox.com/scl/fi/cbyh26h7ukj2jty3j2otf/CV_Yikuan-Ji.pdf?rlkey=ray9i3916bf3xlqvkqpmebvka&st=swfbex3m&dl=0" target="_blank">CV</a>
-                </div>
-            </div>
+            <a href="#" class="project-link" target="_blank">PDF(Coming Soon)</a>
         </div>
 
-        <section class="container research-section">
-            <h2>Research Interests</h2>
-            <ul>
-                <li><strong>Transportation Economics</strong></li>
-                <li><strong>Urban Economics</strong></li>
-                <li><strong>Environmental Economics</strong></li>
-                <li><strong>Energy Economics</strong></li>
-            </ul>
-        </section>
+        <div class="project-card">
+            <div class="project-title">The Effect of Marginal Change in Public Transit System on Traffic Congestion</div>
+            <div class="project-type">Working Paper</div>
+            <div class="project-description">
+                Abstract: The impact of public transit on relieving traffic congestion remains a topic of debate. This paper uses a panel event study and a difference-in-differences (DID) design to estimate the impact of an intensive marginal change in the public transit system on traffic congestion, using data from three new subway stations in New York City (NYC) that opened in 2017. The results show that on average, traffic delays in nearby road sections decreased by 12.0% to 15.0% after the opening of the new stations, a magnitude similar to the effects reported in the literature for the entire transit system. The study also calculates an annual direct congestion-relief benefit of the transit system, estimated to be $332,601. These findings provide evidence for the potential of marginal changes in the public transit system to relieve traffic congestion and support the importance of subsidizing public transit.
+            </div>
+            <a href="https://www.dropbox.com/scl/fi/eskqbnwyrv2g8qctslsgu/Public-transit-extension.pdf?rlkey=p0a94siq6ellmjzupc7iwurm0&st=iy5hgua4&dl=0" class="project-link"> PDF </a>
+        </div>
 
-        <section id="contact" class="container contact-section">
-            <h2>Contact Information</h2>
-            <p class="contact-item">2200 Symons Hall, 7998 Regents Drive, College Park, MD 20742</p>
-            <p class="contact-item"><a href="mailto:yk68@umd.edu">yk68@umd.edu</a></p>
-        </section>
+        <div class="project-card">
+            <div class="project-title">Network Effect of Road Construction on Traffic Speed: Evidence from Manhattan Island</div>
+            <div class="project-type">Working Paper</div>
+            <div class="coauthor">Co-authored with Joshua Linn and Chenfeng Xiong</div>
+            <div class="project-description">
+                Abstract: Road Construction, proposed as a solution to severe congestion, might increase commuting time and decrease traffic speed due to poor management or delay in completion. This project combined the INRIX traffic data with 13,000 construction record data to estimate the network effect of road construction on traffic speed in the Manhattan area of New York City, calculate the exact amount of congestion cost caused by construction and evaluate the efficiency of penalty on late completion and feasibility of bonus for early completion in the construction contrast. The main finding is that an extra road construction project will decrease traffic speed by 1.0%-1.6%, causing commuting time to increase by 0.06%-0.09%. Regarding the distance to the construction, traffic speed will decrease by 1.6% when the average distance to the construction sites increases by 1%. The estimated cost of a decrease in speed of an extra road project is about $33,000- 104,000 per day for Manhattan commuters, which is relatively higher than the late penalty in construction contrast. This project suggests that a bonus for early completion or a higher penalty for late completion should be considered in road construction contrast.
+            </div>
+            <a href="#" class="project-link"> PDF (Coming Soon)</a>
+          <a href="https://www.dropbox.com/scl/fi/ysn9qpxazz5ktsqmr9roe/construction-slides.pdf?rlkey=fwrhwthem9ut1h38nqau7le34&st=up7b892a&dl=0" class="project-link"> Slides</a>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">Marginal Effect of Road Construction on Traffic Speed: Evidence From New York City</div>
+            <div class="project-type">Master's Thesis</div>
+            <div class="project-description">
+                Abstract: Road Construction, which is proposed as a solution to severe congestion, might increase commuting time and decrease traffic speed due to poor management or delay in completion. This paper sets up a traffic dataset with 2 million real-time traffic speed data and 13,000 construction record data from 2017 - 2019 to estimate the marginal effect of road construction on traffic speed in New York City and evaluate the efficiency of construction contrast. The main finding is that traffic speed will decrease by 3.47% on average when vehicles are 1km closer to the road project. Speed decreases slower when vehicles are further from construction. Besides, long-duration and "unplanned" projects have a greater effect on vehicle speed. The estimated cost of a decrease in speed is about $326-451 per hour, which is relatively higher than the penalty in construction contrast. Based on this, this paper suggests that a bonus for early completion or a higher penalty for late completion should be considered in road construction contrast.
+            </div>
+            <a href="https://ecommons.cornell.edu/items/b35e8d4a-f6ad-4dd1-8053-ceaddc683114" class="project-link">PDF</a>
+        </div>
     </main>
 
     <footer>
