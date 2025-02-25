@@ -20,25 +20,25 @@
             background-color: #fafafa;
             padding: 1rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             border-bottom: 1px solid #e0e0e0;
-            flex-wrap: wrap;
+            position: relative;
         }
         header h1 {
             margin: 0;
             font-size: 2rem;
             font-weight: normal;
             color: #222;
-            text-align: center;
-            flex: 1 1 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .nav-links {
+            position: absolute;
+            right: 2rem;
             display: flex;
-            justify-content: center;
             gap: 1.5rem;
-            flex-wrap: wrap;
-            width: 100%;
         }
         .nav-links a {
             font-size: 1.1rem;
@@ -143,13 +143,17 @@
             }
             header h1 {
                 font-size: 1.8rem;
+                position: static;
+                transform: none;
                 order: 1;
+                margin-bottom: 1rem;
             }
             .nav-links {
-                flex-direction: row;
+                position: static;
                 justify-content: center;
-                order: 2;
-                gap: 0.5rem;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin-top: 1rem;
             }
             .bio-section {
                 flex-direction: column;
@@ -163,17 +167,6 @@
             }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const links = document.querySelectorAll('.nav-links a');
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    window.location.href = this.getAttribute('href');
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <header>
@@ -201,7 +194,6 @@
                 <div class="button-links">
                     <a href="#contact">Email</a>
                     <a href="https://www.linkedin.com/in/yikuan-ji-169546151/" target="_blank">LinkedIn</a>
-                    <a href="https://scholar.google.com/citations?user=6VTJ56YAAAAJ" target="_blank">Google Scholar</a>
                     <a href="https://www.dropbox.com/scl/fi/cbyh26h7ukj2jty3j2otf/CV_Yikuan-Ji.pdf?rlkey=ray9i3916bf3xlqvkqpmebvka&st=swfbex3m&dl=0" target="_blank">CV</a>
                 </div>
             </div>
