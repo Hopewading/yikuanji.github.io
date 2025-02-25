@@ -146,8 +146,8 @@
                 order: 1;
             }
             .nav-links {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: center;
                 order: 2;
                 gap: 0.5rem;
             }
@@ -167,7 +167,8 @@
         document.addEventListener("DOMContentLoaded", function() {
             const links = document.querySelectorAll('.nav-links a');
             links.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
                     window.location.href = this.getAttribute('href');
                 });
             });
@@ -200,6 +201,7 @@
                 <div class="button-links">
                     <a href="#contact">Email</a>
                     <a href="https://www.linkedin.com/in/yikuan-ji-169546151/" target="_blank">LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=6VTJ56YAAAAJ" target="_blank">Google Scholar</a>
                     <a href="https://www.dropbox.com/scl/fi/cbyh26h7ukj2jty3j2otf/CV_Yikuan-Ji.pdf?rlkey=ray9i3916bf3xlqvkqpmebvka&st=swfbex3m&dl=0" target="_blank">CV</a>
                 </div>
             </div>
