@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" Research projects by Yikuan Ji, Ph.D. candidate at the University of Maryland, focusing on Transportation Economics, Urban Economics, Environmental Economics, and Energy Economics.">
+    <meta name="description" content="Research projects by Yikuan Ji, Ph.D. candidate at the University of Maryland, focusing on Transportation Economics, Urban Economics, Environmental Economics, and Energy Economics.">
     <meta name="keywords" content="Yikuan Ji Research, Transportation Economics, Urban Economics, Congestion Pricing, Public Transit, Environmental Economics, Energy Economics">
     <meta name="author" content="Yikuan Ji">
     <title>Yikuan Ji - Research</title>
@@ -42,10 +42,7 @@
             text-decoration: none;
             font-weight: bold;
         }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-        .nav-links .active {
+        .nav-links a:hover, .nav-links .active {
             text-decoration: underline;
         }
         .container {
@@ -59,6 +56,8 @@
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
         }
         .project-title {
             font-size: 1.5rem;
@@ -79,6 +78,7 @@
             display: flex;
             gap: 1rem;
             margin-top: 1rem;
+            justify-content: flex-start;
         }
         .download-button {
             padding: 0.5rem 1rem;
@@ -114,6 +114,9 @@
                 gap: 1rem;
                 margin-top: 1rem;
             }
+            .project-card {
+                padding: 1.5rem;
+            }
             .button-group {
                 flex-direction: column;
                 align-items: flex-start;
@@ -132,12 +135,12 @@
     </header>
 
     <main class="container">
-        
-        <div class="project-card">
+        <div class="project-card" style="align-self: stretch;">
             <div class="project-title">Distributional Impacts of Congestion Charge Policy in New York City</div>
             <div class="project-type">Job Market Paper</div>
             <div class="project-description">
               Abstract: This research examines the distributional impacts of New York City’s congestion pricing policy, the first proposed of its kind in the United States. Although initially planned for January 2025, the policy was paused by the federal government, providing a unique opportunity to evaluate its potential impacts and inform future implementation. The policy aims to reduce traffic congestion in Manhattan’s Central Business District and generate revenue for public transit improvements, but equity concerns remain central as costs and benefits may not be evenly distributed. This study investigates welfare changes experienced by residents across different socioeconomic and geographic groups, using a discrete choice model calibrated with real-time traffic and trip diary data to evaluate behavioral responses. It also explores the effects of various pricing structures and revenue allocation strategies. The findings offer actionable insights for policymakers on designing congestion pricing systems that reduce traffic congestion while ensuring fairness, making the best use of revenue, and gaining broad public support.
+            </div>
             <div class="button-group">
                 <a href="#" class="download-button" target="_blank">PDF (Coming Soon)</a>
             </div>
