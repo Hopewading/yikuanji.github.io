@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Teaching experience of Yikuan Ji, Ph.D. candidate at the University of Maryland, with courses taught at the University of Maryland and Cornell University.">
-    <meta name="keywords" content="Yikuan Ji Teaching, University of Maryland, Cornell University, Teaching Assistant, Economics, Energy Economics, Environmental Economics">
+    <meta name="description" content="Research page for Yikuan Ji, Ph.D. candidate at the University of Maryland, showcasing research projects.">
+    <meta name="keywords" content="Yikuan Ji, Research, Transportation Economics, University of Maryland">
     <meta name="author" content="Yikuan Ji">
-    <title>Yikuan Ji - Teaching</title>
+    <title>Yikuan Ji - Research</title>
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -18,34 +18,35 @@
         }
         header {
             background-color: #fafafa;
-            padding: 1rem 0;
+            padding: 1rem;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e0e0e0;
-            position: relative;
+            flex-wrap: wrap;
         }
         header h1 {
             margin: 0;
             font-size: 2rem;
             font-weight: normal;
             color: #222;
+            text-align: center;
+            flex: 1 1 100%;
         }
         .nav-links {
-            position: absolute;
-            right: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            width: 100%;
         }
         .nav-links a {
-            margin-left: 1.5rem;
             font-size: 1.1rem;
             color: #0066cc;
             text-decoration: none;
             font-weight: bold;
         }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-        .nav-links .active {
+        .nav-links a:hover, .nav-links .active {
             text-decoration: underline;
         }
         .container {
@@ -53,22 +54,15 @@
             margin: 3rem auto;
             padding: 0 1rem;
         }
-        .teaching-section {
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-        .school-title {
-            font-size: 1.5rem;
+        .section-title {
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
-        .course-item {
+        .project-item {
+            margin-bottom: 1rem;
             font-size: 1.2rem;
-            margin-bottom: 0.8rem;
         }
         footer {
             text-align: center;
@@ -78,18 +72,37 @@
             border-top: 1px solid #e0e0e0;
         }
         @media (max-width: 768px) {
-            body {
-                font-size: 16px;
+            header {
+                flex-direction: column;
+                align-items: center;
             }
             header h1 {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
+                order: 1;
+            }
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                order: 2;
+                gap: 0.5rem;
             }
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.href = this.getAttribute('href');
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
-        <h1>Teaching</h1>
+        <h1>Yikuan Ji</h1>
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="research.html">Research</a>
