@@ -55,32 +55,42 @@
             height: auto;
             object-fit: cover;
         }
-        .cv-button {
-            display: inline-flex;
-            align-items: center;
+        .icon-links {
+            display: flex;
             justify-content: center;
-            padding: 0.8rem 2rem;
-            font-size: 1.1rem;
-            background-color: #222;
-            color: white;
-            border-radius: 25px;
-            text-decoration: none;
+            align-items: center;
+            gap: 2rem;
             margin-top: 1.5rem;
-            transition: background-color 0.3s ease;
         }
-        .cv-button:hover {
-            background-color: #555;
+        .icon-links a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #0066cc;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
         }
-        .icon {
-            margin-right: 0.5rem;
+        .icon-links a:hover {
+            color: #004999;
+        }
+        .icon-links i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
         }
         .research-section ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
         }
         .research-section ul li {
-            margin-bottom: 1.5rem;
             font-size: 1.1rem;
+            background-color: #f1f1f1;
+            padding: 1rem 2rem;
+            border-radius: 20px;
         }
         .contact-section {
             background-color: #f9f9f9;
@@ -101,15 +111,6 @@
         .contact-item i {
             margin-right: 0.5rem;
             font-size: 1.4rem;
-        }
-        .social-links a {
-            margin: 0 1rem;
-            font-size: 1.5rem;
-            color: #333;
-            transition: color 0.3s ease;
-        }
-        .social-links a:hover {
-            color: #0066cc;
         }
         footer {
             text-align: center;
@@ -139,6 +140,10 @@
                 width: 100%;
                 max-width: 300px;
             }
+            .icon-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
     </style>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -152,7 +157,7 @@
         <div class="container bio-section">
             <div class="bio-text">
                 <h2>About Me</h2>
-               <p>
+            <p>
                     Welcome to my website! I am Yikuan Ji, a Ph.D. candidate in Agricultural and Resource Economics at <strong>University of Maryland, College Park</strong>. My research interests lie at the intersection of transportation economics, energy economics, and environmental economics. My current research primarily focuses on the distributional effects of the congestion charge policy in New York City. I plan to be on the <strong> 2025-25 Job Market.</strong>
                 </p>
                 <p>
@@ -161,19 +166,21 @@
             </div>
             <div class="photo-section">
                 <img src="/assets/profile.jpg" alt="Yikuan Ji's Photo" class="profile-photo">
-                <a class="cv-button" href="https://www.dropbox.com/scl/fi/cbyh26h7ukj2jty3j2otf/CV_Yikuan-Ji.pdf?rlkey=ray9i3916bf3xlqvkqpmebvka&st=swfbex3m&dl=0" target="_blank">
-                    <i class="fas fa-file-alt icon"></i> View My CV
-                </a>
+                <div class="icon-links">
+                    <a href="mailto:yk68@umd.edu" target="_blank"><i class="fas fa-envelope"></i>Email</a>
+                    <a href="https://www.linkedin.com/in/yikuan-ji-169546151/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                    <a href="https://www.dropbox.com/scl/fi/cbyh26h7ukj2jty3j2otf/CV_Yikuan-Ji.pdf?rlkey=ray9i3916bf3xlqvkqpmebvka&st=swfbex3m&dl=1" target="_blank"><i class="fas fa-file-alt"></i>CV</a>
+                </div>
             </div>
         </div>
 
         <section class="container research-section">
             <h2>Research Interests</h2>
             <ul>
-                    <li><strong>Transportation Economics</li>
-                    <li><strong>Urban Economics</li>
-                    <li><strong>Environmental Economics</li>
-                    <li><strong>Energy Economics</li>
+                <li><strong>Transportation Economics</strong></li>
+                <li><strong>Urban Economics</strong></li>
+                <li><strong>Environmental Economics</strong></li>
+                <li><strong>Energy Economics</strong></li>
             </ul>
         </section>
 
@@ -181,9 +188,6 @@
             <h2>Contact Information</h2>
             <p class="contact-item"><i class="fas fa-map-marker-alt"></i> 2200 Symons Hall, 7998 Regents Drive, College Park, MD 20742</p>
             <p class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:yk68@umd.edu">yk68@umd.edu</a></p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/yikuan-ji-169546151/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
         </section>
     </main>
 
